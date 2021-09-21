@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    overflow: hidden;
+    
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    float: center;
+    background-color: #ddd;
+    color: black;
+    background-color: #666;
+    color: white;
+  }

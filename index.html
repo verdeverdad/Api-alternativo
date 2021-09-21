@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>Enlazando Ideas</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <style>
+   /* Bordered form */
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+
+<body class="text-center" class="login">
+  <div class="container p-5">
+    
+      <div class="container p-8">
+      <form class="login " action="inicio.html" method="GET">
+        <h2>Por favor regístrese</h2>
+          <div>
+            <label>Nombre de usuario:</label>
+            <input type="text" name="username" id="username" placeholder="Escriba su nombre aquí" required />
+          </div>
+          <div>
+            <label>Correo electrónico:</label>
+            <input type="text" name="email" id="email" placeholder="Email" required />
+          </div>
+          <div>
+            <label>Contraseña:</label>
+            <input type="password" name="password" id="password" placeholder="Contraseña" required />
+          </div>
+
+          <input type="checkbox">
+          <label>Recordarme</label><br>
+
+          <button type="submit" name="register" onclick="click_al_register()">
+            <strong>Registrar</strong>
+          </button>
+
+      </form>
+      
+    </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    function click_al_register() {
+      //window.location.href = 'inicio.html';
+
+      var username = document.getElementById("username").value
+      var email = document.getElementById("email").value
+      var password = document.getElementById("password").value
+
+      if (username != "" && email != "" && password != "") {
+        window.location.href = 'inicio.html';
+        //return false
+      }
+      }
+  </script>
+</body>
+
+</html>
