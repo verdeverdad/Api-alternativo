@@ -161,9 +161,29 @@
     </nav>
   </div>
 
+
   <div class="header">
     <h1>ENLAZANDO IDEAS</h1>
-    <p> <b>C   o   n   s   t  r  u  y  e  n  d  o </b>f u t u r o</p>
+    <p> <b>C o n s t r u y e n d o </b>f u t u r o</p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-link"
+      viewBox="0 0 16 16">
+      <path
+        d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+      <path
+        d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-lightbulb"
+      viewBox="0 0 16 16">
+      <path
+        d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-link"
+      viewBox="0 0 16 16">
+      <path
+        d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+      <path
+        d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z" />
+    </svg>
   </div>
 
   <div class="row">
@@ -200,7 +220,7 @@
         <label for="nacional">Seleccionar:</label>
 
         <select id="CNO" name="CNO">
-          <option value="integrantes">Integrantes</option> 
+          <option value="integrantes">Integrantes</option>
           <option value="resoluciones">Resoluciones</option>
           <option value="comunicados">Comunicados</option>
           <option value="sesiones">Sesones</option>
@@ -216,10 +236,11 @@
       <h5>Title description, Dec 7, 2017</h5>
       <a href="orgNacional.html">más info..</a>
       <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
           SECCIONES
         </a>
-      
+
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
@@ -247,22 +268,58 @@
       <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
       </p>
-    </div>
+
+
+     
+
+      <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="..." class="rounded me-2" alt="...">
+            <strong class="me-auto">GENIAL</strong>
+            <small>1 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Manchitas ha sido adoptado.
+
+          </div>
+        </div>
+      </div>
+      <script>
+      var toastTrigger = document.getElementById('liveToastBtn')
+      var toastLiveExample = document.getElementById('liveToast')
+      if (toastTrigger) {
+        toastTrigger.addEventListener('click', function () {
+          var toast = new bootstrap.Toast(toastLiveExample)
+      
+          toast.show()
+        })
+      }</script>
+    
+
+
+
+</body>
+
+</div>
+</div>
+
+
+<script src="js/inicio.js"></script>
+<script src="js/init.js"></script>
+
+
+<footer class="text-muted bg-light">
+  <div class="container">
+    <p class="float-right">
+      <a href="inicio.html">Volver arriba</a>
+    </p>
   </div>
-
-
-  <script src="js/inicio.js"></script>
-  <script src="js/init.js"></script>
-
-
-  <footer class="text-muted bg-light">
-    <div class="container">
-      <p class="float-right">
-        <a href="inicio.html">Volver arriba</a>
-      </p>
-    </div>
-  </footer>
-  <script src="js/bootstrap.bundle.min.js"></script>
+</footer>
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
